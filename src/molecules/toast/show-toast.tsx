@@ -69,11 +69,11 @@ showToast.warning = (message: React.ReactNode, options?: ToastOptions) =>
 
 showToast.dismiss = (toastId?: string | number) => toast.dismiss(toastId);
 
-export interface ToastContainerProps extends ToastContainerProps {
+export interface GlobalToastContainerProps extends ToastContainerProps {
   containerId?: string;
 }
 
-export const GlobalToastContainer: React.FC<ToastContainerProps> = ({
+export const GlobalToastContainer: React.FC<GlobalToastContainerProps> = ({
   ...props
 }) => {
   return <ToastContainer {...defaultToastOptions} newestOnTop {...props} />;
