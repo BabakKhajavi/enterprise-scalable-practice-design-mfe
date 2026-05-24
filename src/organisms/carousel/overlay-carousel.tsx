@@ -5,7 +5,6 @@ import { Autoplay, Navigation, EffectCards } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-cards';
-import { on } from 'events';
 type MaxOne =
   | 0
   | 0.1

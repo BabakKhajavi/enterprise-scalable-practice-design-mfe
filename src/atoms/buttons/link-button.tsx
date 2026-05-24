@@ -1,11 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Button,
-  ButtonProps,
-  CircularProgress,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { ButtonProps, Stack, Typography } from '@mui/material';
 import { SxProps, Theme } from '@mui/material/styles';
 import { Box } from '@mui/system';
 
@@ -44,7 +38,7 @@ export const LinkButton: FC<LinkButtonProps> = ({
 }) => (
   <Typography
     component="button"
-    onClick={(e) => {
+    onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
       onClick?.();
     }}
@@ -68,6 +62,7 @@ export const LinkButton: FC<LinkButtonProps> = ({
       ...sx,
     }}
     variant={variant || 'body1'}
+    {...props}
   >
     <Stack direction="row" alignItems="center" columnGap={0.5}>
       {icon && <>{icon}</>}
